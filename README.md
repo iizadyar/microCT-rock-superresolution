@@ -33,9 +33,33 @@ Porosity and pore-connectivity analyses were performed separately using Avizo an
 
 ## Installation
 
-Create or activate a Python environment, then install the required packages:
+Clone the repository and enter the project folder:
 
 ```bash
+git clone https://github.com/YOUR-USERNAME/mct-rock-sr.git
+cd mct-rock-sr
+```
+
+Create and activate a Python environment.
+
+On Windows:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+On macOS or Linux:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Install the required packages:
+
+```bash
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
@@ -80,7 +104,7 @@ Dataset image files are excluded through `.gitignore`, while `.gitkeep` files pr
 
 A quick-test file is included to verify that the repository is installed correctly and that the main workflow can run.
 
-Run:
+After installation, run:
 
 ```bash
 python quick_test.py
@@ -310,6 +334,7 @@ scripts/
 The following files and folders are intended to be excluded by `.gitignore`:
 
 ```text
+.venv/
 outputs/
 results/
 checkpoints/
@@ -320,14 +345,10 @@ __pycache__/
 *.ckpt
 data/**/*.png
 data/**/*.jpg
-data/**/*.jpeg
-data/**/*.tif
-data/**/*.tiff
-data/**/*.bmp
 ```
 
-These exclusions keep generated outputs, result files, model checkpoints, cache files, and dataset image files out of the GitHub repository. The dataset folder structure is preserved using `.gitkeep` files.
+These exclusions keep virtual environments, generated outputs, result files, model checkpoints, cache files, and dataset files out of the GitHub repository. The dataset folder structure is preserved using `.gitkeep` files.
 
 ## License
 
-This code is released under the MIT License. See the `LICENSE` file for details.
+This code is released under the MIT License.
