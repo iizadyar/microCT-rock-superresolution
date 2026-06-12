@@ -1,0 +1,41 @@
+@'
+# Virtual environment
+.venv/
+venv/
+
+# Generated outputs and result files
+outputs/
+results/
+checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Dataset files
+data/**/*.png
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.tif
+data/**/*.tiff
+data/**/*.bmp
+data/**/*.info
+data/**/*.raw
+data/**/*.npy
+data/**/*.npz
+
+# Keep dataset folder structure
+!data/**/.gitkeep
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+'@ | Set-Content .gitignore
