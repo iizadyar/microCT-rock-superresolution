@@ -26,7 +26,7 @@ COIFPM dataset:
 
 DRSRD1 dataset:
   4x super-resolution
-  Methods: bicubic interpolation, SRCNN, FSRCNN, EDSR, and RCAN
+  Methods: bicubic interpolation, SRCNN, FSRCNN, EDSR, simplified EDSR, and RCAN
 ```
 
 Porosity and pore-connectivity analyses were performed separately using Avizo and are not part of this Python workflow.
@@ -350,6 +350,3 @@ data/**/*.jpg
 
 These exclusions keep virtual environments, generated outputs, result files, model checkpoints, cache files, and dataset files out of the GitHub repository. The dataset folder structure is preserved using `.gitkeep` files.
 
-## License
-
-This code is released under the MIT License.

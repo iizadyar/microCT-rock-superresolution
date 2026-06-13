@@ -11,7 +11,6 @@ from .config import resolve_path
 from .preprocessing import IMAGE_EXTENSIONS, list_images, load_grayscale, image_to_tensor, match_scale, bicubic_resize
 from .augmentation import paired_augment
 
-
 @dataclass
 class ImagePair:
     lr_path: Path

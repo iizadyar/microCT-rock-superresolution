@@ -4,7 +4,6 @@ import math
 import torch
 import torch.nn as nn
 
-
 class SRCNN(nn.Module):
     def __init__(self):
         super(SRCNN, self).__init__()

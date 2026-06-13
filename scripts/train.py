@@ -11,7 +11,6 @@ if str(ROOT) not in sys.path:
 from microct_sr.config import load_config
 from microct_sr.engine import train_models
 
-
 def main():
     parser = argparse.ArgumentParser(description="Train super-resolution models.")
     parser.add_argument("--config", required=True)

@@ -4,7 +4,6 @@ from pathlib import Path
 import csv
 import json
 
-
 def write_csv(path: str | Path, rows: list[dict]) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)

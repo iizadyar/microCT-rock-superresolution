@@ -4,7 +4,6 @@ import math
 import torch
 import torch.nn.functional as F
 
-
 def mse_value(output: torch.Tensor, target: torch.Tensor) -> float:
     return float(F.mse_loss(output.detach(), target.detach()).cpu().item())
 
