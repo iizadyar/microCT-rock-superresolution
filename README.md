@@ -133,7 +133,7 @@ outputs/quick_test_data/
 
 This allows the repository test to run without distributing the full research datasets.
 
-The quick test checks installation, imports, image-pair loading, preprocessing, model construction, MSE loss calculation, PSNR calculation, cross-validation, hyperparameter optimization, runtime reporting, and output writing.
+The quick test checks installation, imports, image-pair loading, preprocessing, model construction, MSE loss calculation, PSNR calculation, cross-validation, hyperparameter optimization, runtime reporting, and output writing. It is intended as a repository functionality test and is not intended to reproduce the full manuscript results.
 
 The quick test writes temporary files under:
 
@@ -345,6 +345,7 @@ __pycache__/
 *.ckpt
 data/**/*.png
 data/**/*.jpg
+
 ```
 
 These exclusions keep virtual environments, generated outputs, result files, model checkpoints, cache files, and dataset files out of the GitHub repository. The dataset folder structure is preserved using `.gitkeep` files.

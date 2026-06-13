@@ -20,6 +20,14 @@ __pycache__/
 # Dataset files
 data/**/*.png
 data/**/*.jpg
+data/**/*.jpeg
+data/**/*.tif
+data/**/*.tiff
+data/**/*.bmp
+data/**/*.info
+data/**/*.raw
+data/**/*.npy
+data/**/*.npz
 
 # Keep dataset folder structure
 !data/**/.gitkeep

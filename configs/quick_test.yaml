@@ -3,12 +3,14 @@ project:
   device: cpu
   num_workers: 0
   verbose: true
+
 dataset:
   name: quick_test
   scale: 4
   hr_dir: outputs/quick_test_data/hr
   lr_dir: outputs/quick_test_data/lr
   crop_to_scale: true
+
 augmentation:
   enabled: false
   apply_to_train: false
@@ -16,6 +18,7 @@ augmentation:
   horizontal_flip: false
   vertical_flip: false
   rot90: false
+
 training:
   epochs: 2
   batch_size: 2
@@ -24,20 +27,23 @@ training:
   k_folds: 2
   early_stopping_patience: 0
   save_images_per_fold: 0
+
 hpo:
   enabled: true
   n_trials: 2
   epochs: 1
   batch_sizes:
-  - 2
+    - 2
   lr_min: 0.0001
   lr_max: 0.001
   split_fraction_for_hpo: 0.5
+
 models:
   simplified_edsr:
     num_features: 4
     num_blocks: 1
     res_scale: 0.1
+
 outputs:
   root: outputs
   save_images: true
