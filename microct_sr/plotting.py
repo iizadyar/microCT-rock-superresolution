@@ -174,13 +174,24 @@ def plot_training_validation_curves(all_train_losses, all_val_losses, all_val_ps
     _finish(output_dir / 'average_loss_psnr_across_folds.png', show=show)
 
 
-def plot_psnr_distribution(psnr_distributions, output_path: str | Path, show: bool = False) -> None:
-    plt.figure()
-    plt.boxplot(psnr_distributions, labels=[f'Fold {i+1}' for i in range(len(psnr_distributions))])
-    plt.xlabel('Fold')
-    plt.ylabel('PSNR')
-    plt.title('PSNR Distribution for Validation Data of Last Epoch in Main Training of Folds')
-    _finish(output_path, show=show)
+def plot_psnr_distribution(psnr_distributions, output_path, show=False):
+    plt.figure(figsize=(8, 6))
+
+    fold_labels = [f"Fold {i + 1}" for i in range(len(psnr_distributions))]
+
+    try:
+        plt.boxplot(psnr_distributions, tick_labels=fold_labels)
+    except TypeError:
+        plt.boxplot(psnr_distributions, labels=fold_labels)
+
+    plt.xlabel("Fold")
+    plt.ylabel("PSNR")
+    plt.title("PSNR Distribution Across Folds")
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300)
+    if show:
+        plt.show()
+    plt.close()
 
 
 def save_tensor_image(tensor: torch.Tensor, path: str | Path) -> None:
