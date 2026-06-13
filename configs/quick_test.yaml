@@ -10,12 +10,12 @@ dataset:
   lr_dir: outputs/quick_test_data/lr
   crop_to_scale: true
 augmentation:
-  enabled: true
-  apply_to_train: true
-  apply_to_validation: true
-  horizontal_flip: true
-  vertical_flip: true
-  rot90: true
+  enabled: false
+  apply_to_train: false
+  apply_to_validation: false
+  horizontal_flip: false
+  vertical_flip: false
+  rot90: false
 training:
   epochs: 2
   batch_size: 2
