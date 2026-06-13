@@ -37,3 +37,9 @@ data/**/*.npz
 Thumbs.db
 .idea/
 .vscode/
+
+# Package metadata
+*.egg-info/
+
+# Package metadata
+*.egg-info/
